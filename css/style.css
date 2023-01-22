@@ -32,7 +32,7 @@ header{
 }
 header img{
     position: relative;
-    z-index: 4;
+    z-index: 3;
     height: 250px;
     width: 100%;
     border-bottom: 1px solid #2E2E2E ;
@@ -244,14 +244,15 @@ label:hover {
 .ico_menu i{
     position: absolute;
     top:30%;
-    
-    
+
 }
 .fa-right-from-bracket{
+
 opacity: 0;
 transform: scaleX(-1);
 }
 .fa-bars{
+    color:white;
     opacity: 1;
 }
 .muestramenu {
@@ -371,7 +372,7 @@ strong {
 }
 
 p {
-    line-height: 1.5em;
+    line-height: 1.3em;
 }
 
 iframe,
@@ -380,10 +381,7 @@ video {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     width: 95%;
     border-radius: 3px;
-    min-width: 730px;
-    
-    
-   
+    min-width: 730px; 
 }
 
 figure {
@@ -393,8 +391,6 @@ figure {
     justify-content: center;
     width: 65%;
     height: auto;
-
-
 }
 
 figcaption {
@@ -406,8 +402,8 @@ figcaption {
 }
 
 footer {
-    
-    margin-top: 20px;
+    font-family: var(--lectura);
+    margin: 10px ,0,10px,0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -429,9 +425,6 @@ footer p {
     position: relative;
     width: 70%;
     min-width: 730px;
-
-
-
 }
 
 .carrusel_div {
@@ -526,6 +519,19 @@ footer p {
 
 .carga{
     animation: aparece ease 0.8s ;
+}
+
+.redes {
+    width: 100px;
+    display:flex;
+    justify-content: space-around;
+}
+
+.fa-linkedin:hover{
+    color:#0C67C3;
+}
+.fa-github:hover{
+    filter: invert(100%);
 }
 
 
