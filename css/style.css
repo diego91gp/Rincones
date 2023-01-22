@@ -12,11 +12,9 @@ html {
     --lectura: 'Montserrat', sans-serif;
 }
 
-body {
-    background-color: rgb(255, 255, 255);
-}
 
 .imagen {
+    user-select: none;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -28,43 +26,18 @@ body {
     background-position: center;
 }
 
-
-
-#playahtml {
-    height: 250px;
-    position: relative;
-    z-index: 2;
-    background-image: url(../html/img/595165.jpg);
-    background-size: cover;
-    user-select: none;
-    margin-bottom: -2px;
+header{
+    margin-bottom: -3px;
+  
 }
-
-#ciudadhtml {
-    height: 250px;
+header img{
     position: relative;
-    z-index: 2;
-    background-image: url(../html/img/394821.jpg);
-    margin-bottom: -2px;
-}
-
-#montañahtml {
+    z-index: 4;
     height: 250px;
-    position: relative;
-    z-index: 2;
-    background-image: url(../html/img/238870.jpg);
-    margin-bottom: -2px;
+    width: 100%;
+    border-bottom: 1px solid #2E2E2E ;
+    object-fit: cover;
 }
-
-#lagohtml {
-    height: 250px;
-    position: relative;
-    z-index: 2;
-    background-image: url(../html/img/7062.jpg);
-    margin-bottom: -2px;
-}
-
-
 
 h1 {
     -webkit-text-stroke: 0.1px #20111b;
