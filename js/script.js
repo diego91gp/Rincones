@@ -1,6 +1,7 @@
 window.onload = function () {
-
+  
    let menu = document.querySelector("#muestra-menu");
+   
    menu.addEventListener("click", muestra);
    let menuizq = document.querySelector(".muestramenu");
    let wrapper = document.querySelector(".wrapper");
@@ -9,7 +10,7 @@ window.onload = function () {
    let icono = document.querySelectorAll(".fa-solid");
    //funcion para cargar elementos al scrollear
    window.addEventListener('scroll', muestracontenido);
- 
+   window.onload=muestracontenido();
 
    function muestracontenido() {
       if (menuizq.style.left != "-100px") {
