@@ -161,13 +161,15 @@ h1 {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
 
 
-#muestra-menu {
+#muestra-menu,
+#desplegamenupeq {
     display: none;
 }
 
@@ -195,6 +197,10 @@ label:hover {
     z-index: 2;
 }
 
+#mueve a{
+    font-size: 1rem;
+}
+
 #navgrande ul ul {
     padding: 5px;
     gap: 10px;
@@ -213,7 +219,6 @@ label:hover {
 }
 
 #navgrande li {
-
     width: 100%;
     height: 100%;
 }
@@ -230,7 +235,6 @@ label:hover {
 }
 
 #navgrande a {
-
     position: relative;
     justify-content: space-around;
     display: flex;
@@ -259,8 +263,6 @@ label:hover {
 
 #navselec>a {
     color: var(--resalta);
-
-
 }
 
 #navselec {
@@ -275,7 +277,7 @@ label:hover {
     border-right: 10px solid transparent;
     border-left: 10px solid white;
     border-bottom: 10px solid transparent;
-    right: 5%;
+    right: 2%;
     top: calc(50% - 10px);
     transition: all 0.5s;
 }
@@ -298,9 +300,11 @@ label:hover {
     z-index: 4;
 }
 
-
-.muestamenu_selec a {
-    height: 50%;
+.muestamenu a , .muestramenu label {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .main {
@@ -314,11 +318,9 @@ label:hover {
 .ico_menu i {
     position: absolute;
     top: 30%;
-
 }
 
 .fa-right-from-bracket {
-
     opacity: 0;
     transform: scaleX(-1);
 }
@@ -329,7 +331,6 @@ label:hover {
 }
 
 .muestramenu {
-
     height: calc(100% - 50px);
     background-color: black;
     color: white;
@@ -344,7 +345,8 @@ label:hover {
 }
 
 .muestramenu>ul {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--lectura);
+    font-size: 0.8em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -362,26 +364,36 @@ label:hover {
 .muestramenu li {
     transition: all 0.5s;
     display: flex;
+    flex-direction: column;
     width: 100%;
     padding-left: 5px;
     height: 50px;
+    position: relative;
+    z-index: 1;
+    background-color: black;
+
 }
 
+
+
 .muestamenu_selec {
-    color: #ecc18a;
+   display:none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    flex-direction: column;
     width: 100%;
+    transition: all ease 0.8s;
 }
 
 .muestamenu_selec a {
-
     font-size: 0.8em;
     padding-left: 10px;
 
 }
 
-.muestramenu li:hover::after,
-#navselec:hover a::before {
 
+#navselec:hover a::before {
     rotate: 90deg;
 }
 
@@ -400,8 +412,6 @@ label:hover {
 .muestamenu_selec a:hover {
     background-color: black;
     color: orange;
-
-
 }
 
 article {

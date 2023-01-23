@@ -1,21 +1,43 @@
 window.onload = function () {
-  
+
    let menu = document.querySelector("#muestra-menu");
-   
+
    menu.addEventListener("click", muestra);
    let menuizq = document.querySelector(".muestramenu");
    let wrapper = document.querySelector(".wrapper");
    let tapa = document.querySelector(".destapa");
    let navp = document.querySelector("#navpeque");
    let icono = document.querySelectorAll(".fa-solid");
+
+//si apreto los links del submenu del nav vista movil se destapa
+   for (const link of document.querySelectorAll(".link")) {
+      link.addEventListener("click", muestra);
+   }
+
    //funcion para cargar elementos al scrollear
    window.addEventListener('scroll', muestracontenido);
-   window.onload=muestracontenido();
+   //si hago reload a la pagina carga el contenido
+   window.onloadeddata = muestracontenido();
+
+
+   let checkbox = document.querySelector("#desplegamenupeq");
+
+   checkbox.addEventListener('change', function () {
+      if (checkbox.checked) {
+         setTimeout(() => {
+            checkbox.parentElement.nextElementSibling.style.display = "flex";
+         }, 150)
+
+         checkbox.parentElement.parentElement.style.marginBottom = "150px";
+      } else {
+         checkbox.parentElement.nextElementSibling.style.display = "none";
+         checkbox.parentElement.parentElement.style.marginBottom = "0";
+
+      }
+   });
 
    function muestracontenido() {
-      if (menuizq.style.left != "-100px") {
-         muestra();
-      }
+
       let elementos = document.getElementsByClassName("elemento");
       let tamañoVentana = window.innerHeight;
 
@@ -27,8 +49,8 @@ window.onload = function () {
       }
 
    };
-  
-   
+
+
    function muestra() {
       if (menuizq.style.left == "-100px") {
          icono[0].style.opacity = "0";
