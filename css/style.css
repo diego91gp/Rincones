@@ -38,6 +38,7 @@ html {
 }
 
 .secciones__div {
+    filter:grayscale(70%);
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -47,23 +48,23 @@ html {
     border: 1px solid #ccc;
     width: 400px;
     height: 400px;
-    filter: grayscale(50%);
+    position:relative;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
 .secciones__div a {
-    position: absolute;
     z-index: -1;
-    width: 100%;
-    height: 100%;
 }
 
 .secciones img {
+    
     width: 100%;
+    height: 100%;
     border-radius: 10px;
     object-fit: cover;
-    height: 100%;
+    position:absolute;
     top: 0;
+    left:0;
 }
 
 .secciones:hover .secciones__div {
@@ -623,7 +624,6 @@ footer p {
 
 
 @media (max-height: 450px) {
-
 
     #navselec>a::before {
         border-top: 6px solid transparent;
