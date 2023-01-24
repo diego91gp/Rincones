@@ -47,7 +47,7 @@ html {
     border: 1px solid #ccc;
     width: 400px;
     height: 400px;
-    filter: grayscale(30%);
+    filter: grayscale(50%);
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
