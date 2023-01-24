@@ -11,7 +11,7 @@ html {
     --resalta: #DD8A1B;
     --lectura: 'Montserrat', sans-serif;
 }
-
+/* Secciones es el div para las imagenes de la landing page que tienen enlaces a cada página */
 .secciones {
     padding: 20px;
     width: 100%;
@@ -47,9 +47,8 @@ html {
     border: 1px solid #ccc;
     width: 400px;
     height: 400px;
-    filter: grayscale(60%);
+    filter: grayscale(30%);
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-
 }
 
 .secciones__div a {
@@ -170,6 +169,7 @@ h1 {
 
 #muestra-menu,
 #desplegamenupeq {
+    position:relative;
     display: none;
 }
 
@@ -188,7 +188,7 @@ label:hover {
     display: flex;
     z-index: 1;
     font-family: var(--mano);
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 #navgrande ul {
@@ -198,7 +198,7 @@ label:hover {
 }
 
 #mueve a{
-    font-size: 1rem;
+    font-size: 0.8em;
 }
 
 #navgrande ul ul {
@@ -270,7 +270,8 @@ label:hover {
     background-color: rgba(24, 24, 23, 0.932);
 }
 
-#navselec>a::before {
+#navselec>a::before
+, #desplegamenupeq {
     position: absolute;
     content: "";
     border-top: 10px solid transparent;
@@ -303,6 +304,7 @@ label:hover {
 .muestamenu a , .muestramenu label {
     display: flex;
     align-items: center;
+    justify-content:space-around;
     height: 100%;
     width: 100%;
 }
@@ -334,7 +336,7 @@ label:hover {
     height: calc(100% - 50px);
     background-color: black;
     color: white;
-    width: 100px;
+    width: 120px;
     display: none;
     flex-direction: column;
     position: fixed;
@@ -373,7 +375,6 @@ label:hover {
     background-color: black;
 
 }
-
 
 
 .muestamenu_selec {
@@ -622,6 +623,8 @@ footer p {
 
 
 @media (max-height: 450px) {
+
+
     #navselec>a::before {
         border-top: 6px solid transparent;
         border-right: 6px solid transparent;
@@ -672,6 +675,21 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    .secciones {
+        gap: 50px;
+    }
+    .secciones p {
+        opacity: 1;
+    }
+    .secciones__div {
+        width: 100%;
+        height: 150px;
+    }
+  
+    .secciones:hover .secciones__div:hover p {
+        font-size: 2em;
+    }
+    
     .wrapper {
         margin-top: 10px;
         width: 95%;

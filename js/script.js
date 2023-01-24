@@ -52,7 +52,7 @@ window.onload = function () {
 
 
    function muestra() {
-      if (menuizq.style.left == "-100px") {
+      if (menuizq.style.left == "-120px") {
          icono[0].style.opacity = "0";
          icono[1].style.opacity = "1";
          menuizq.style.left = "0";
@@ -65,7 +65,7 @@ window.onload = function () {
       } else {
          icono[0].style.opacity = "1";
          icono[1].style.opacity = "0";
-         menuizq.style.left = "-100px";
+         menuizq.style.left = "-120px";
          wrapper.style.left = "0";
          navp.style.backgroundColor = "rgba(42, 40, 40, 0.816)";
          navp.style.color = "black";
